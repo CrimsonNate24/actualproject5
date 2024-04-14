@@ -34,7 +34,7 @@ jobs:
           severity-cutoff: high
           acs-report-enable: true
       - name: Examine grype report
-        run: cat "./results.sariff"
+        run: cat "./results.sarif"
       - name: Upload vulnerability report
         uses: github/codeql-action/upload-sarif@v3
         if: success() || failure()
